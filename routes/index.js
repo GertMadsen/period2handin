@@ -18,27 +18,27 @@ router.get('/', function(req, res, next) {
 /* GET all users page. */
 router.get('/users', async function(req, res, next) {
   var users = await userFacade.getAllUsers();
-  res.render('jsonview', { title: 'Show all users', jsonStr: users });
+  res.json(users);
 });
 
 /* GET user by id page. */
 router.get('/user/:userId', async function(req, res, next) {
   var userId = req.param("userId"); 
   var user = await userFacade.findById(userId);
-  res.render('jsonview', { title: 'Show user by id', jsonStr: user });
+  res.json(user);
 });
 
 /* GET all blogs page. */
 router.get('/locationblogs', async function(req, res, next) {
   var blogs = await blogFacade.getAllBlogs();
-  res.render('jsonview', { title: 'Show all users', jsonStr: blogs });
+  res.json(blogs);
 });
 
 /* GET blog by id page. */
 router.get('/locationblog/:blogId', async function(req, res, next) {
   var blogId = req.param("blogId"); 
   var blog = await blogFacade.findById(blogId);
-  res.render('jsonview', { title: 'Show blog by id', jsonStr: blog });
+  res.json(blog);
 });
 
 module.exports = router;

@@ -27,7 +27,7 @@ describe('Testing REST API', function () {
     };
 
      request(options, function (error, res, body) {
-      console.log(body);
+      console.log(body[0].firstName);
       done()
     })
   });
