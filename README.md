@@ -3,7 +3,7 @@
 ----
 
 Start på 'miniProjekt' som indeholder kode der demonstrerer:
-* WebServer:
+* Web Framework for Node.js:
   * Express.
   * Embedded JavaScript (server-side templating)
 * Testing:
