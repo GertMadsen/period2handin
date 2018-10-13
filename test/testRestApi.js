@@ -26,10 +26,10 @@ describe('Testing REST API', function () {
       json: true
     };
 
-    request(options, function (error, res, body) {
-      console.log(body)
+     request(options, function (error, res, body) {
+      console.log(body);
+      done()
     })
-    done()
   });
 
 
