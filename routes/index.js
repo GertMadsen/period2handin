@@ -30,8 +30,8 @@ router.get('/user/:userId', async function(req, res, next) {
 
 /* GET all blogs page. */
 router.get('/locationblogs', async function(req, res, next) {
-  var users = await blogFacade.getAllBlogs();
-  res.render('jsonview', { title: 'Show all users', jsonStr: users });
+  var blogs = await blogFacade.getAllBlogs();
+  res.render('jsonview', { title: 'Show all users', jsonStr: blogs });
 });
 
 /* GET blog by id page. */
