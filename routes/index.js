@@ -11,8 +11,12 @@ var userFacade = require("../facades/userFacade");
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mini Project REST API' });
+router.get('/', async function(req, res, next) {
+  var users = await userFacade.getAllUsers();
+  var blogs = await blogFacade.getAllBlogs();
+  var userAmount = users.length;
+  var blogAmount = blogs.length;
+  res.render('index', { title: 'Welcome to my Mini Project.', userAmount, blogAmount });
 });
 
 /* GET all users page. */

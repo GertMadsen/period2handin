@@ -6,9 +6,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p><b>/users</b> - Show all users</p>
-    <p><b>/user/&lt;id&gt;</b> - Show user with the specific id</p>
-    <p><b>/locationblogs</b> - Show all locationblogs</p>
+    <h2>Rest api documentation:</h2><br>
+    <h3>Number of users: <%= userAmount %></h3>
+    <p><b>/users</b> - Show all users (<a href="/users">link to endpoint</a>)</p>    
+    <p><b>/user/&lt;id&gt;</b> - Show user with the specific id</p><br>
+    <h3>Number of locationblogs: <%= userAmount %></h3>
+    <p><b>/locationblogs</b> - Show all locationblogs (<a href="/locationblogs">link to endpoint</a>)</p>
     <p><b>/locationblog/&lt;id&gt;</b> - Show locationblog with the specific id</p>
   </body>
 </html>
